@@ -1,7 +1,18 @@
+import MovingTagline from "../components/Sections/MovingTagline"
+import ServiceCloud from "../components/Sections/ServiceCloud"
+import Achievements from "../components/Sections/Achievements"
+import UserStories from "../components/Sections/Userstories"
+import Hero from "../components/Sections/Hero"
+
 export default function HomePage(){
     return(
        <>
-        
-       </>
+        <Hero />
+        <MovingTagline />
+        <ServiceCloud />
+        <Achievements />
+        <UserStories />
+        </>
+       
     )
 }
