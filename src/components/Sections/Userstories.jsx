@@ -53,7 +53,7 @@ export default function UserStories() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-block px-4 py-2 bg-sky-100 text-sky-600 rounded-full text-sm font-semibold mb-4">
             TESTIMONIALS
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -69,7 +69,7 @@ export default function UserStories() {
           <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
             
             {/* Quote Icon */}
-            <div className="absolute top-8 left-8 w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center opacity-10">
+            <div className="absolute top-8 left-8 w-16 h-16 bg-gradient-to-br from-sky-600 to-cyan-500 rounded-2xl flex items-center justify-center opacity-10">
               <Quote className="w-8 h-8 text-white" />
             </div>
 
@@ -89,7 +89,7 @@ export default function UserStories() {
               </blockquote>
 
               {/* Highlight Badge */}
-              <div className="inline-block bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-8">
+              <div className="inline-block bg-sky-100 text-sky-600   px-4 py-2 rounded-full text-sm font-semibold mb-8">
                 ✨ {testimonials[currentIndex].highlight}
               </div>
 
@@ -116,14 +116,14 @@ export default function UserStories() {
             <div className="flex gap-4 mt-8 justify-center md:justify-end">
               <button
                 onClick={prevTestimonial}
-                className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 hover:text-white flex items-center justify-center transition-all duration-300 group"
+                className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gradient-to-br hover:from-sky-400 hover:to-cyan-300 hover:text-white flex items-center justify-center transition-all duration-300 group"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={nextTestimonial}
-                className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-600 hover:text-white flex items-center justify-center transition-all duration-300 group"
+                className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gradient-to-br hover:from-sky-400 hover:to-cyan-300 hover:text-white flex items-center justify-center transition-all duration-300 group"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -139,7 +139,7 @@ export default function UserStories() {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 w-8' 
+                    ? 'bg-gradient-to-r from-sky-400  to-cyan-400 w-8' 
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
@@ -151,19 +151,19 @@ export default function UserStories() {
         {/* Bottom Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+            <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
               4.9/5
             </div>
             <div className="text-gray-600">Average Rating</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+            <div className="text-4xl font-bold bg-gradient-to-r  from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
               2,500+
             </div>
             <div className="text-gray-600">Happy Customers</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+            <div className="text-4xl font-bold bg-gradient-to-r  from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
               98%
             </div>
             <div className="text-gray-600">Would Recommend</div>

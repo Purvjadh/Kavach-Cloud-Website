@@ -1,5 +1,4 @@
-
-import KavachCloudLogo from '../../assets/images/kavachCloudLogo.png';
+import companyLogo from '../../assets/images/companyLogo.png'
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -13,7 +12,7 @@ export default function Hero() {
             {/* Company Aim - 5-6 words */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Secure Cloud Storage
-              <span className="block text-purple-600">Made Simple</span>
+              <span className="block text-sky-500">Made Simple</span>
             </h1>
 
             <p className="text-xl text-gray-600 max-w-xl">
@@ -23,14 +22,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link 
                 to="/contact"
-                className="bg-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition text-center"
+                className="bg-sky-500  text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-500 transition text-center"
               >
                 Get Started
               </Link>
 
               <Link 
                 to="/services"
-                className="bg-transparent border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-600 hover:text-white transition text-center"
+                className="bg-transparent border-2 border-sky-500 text-sky-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-sky-500 hover:text-white transition text-center"
               >
                 Learn More
               </Link>
@@ -41,7 +40,7 @@ export default function Hero() {
           <div className="flex items-center justify-center">
             <div className="w-full max-w-md">
               <img 
-                src={KavachCloudLogo}
+                src={companyLogo}
                 alt="Kavach Cloud Logo"
                 className="w-full h-auto"
                 onError={(e) => {

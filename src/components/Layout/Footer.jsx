@@ -14,7 +14,7 @@ export default function Footer() {
               Secure cloud storage solutions for businesses of all sizes.
             </p>
           </div>
-          
+           
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="font-bold mb-4">Quick Links</h4>
