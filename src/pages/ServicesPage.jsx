@@ -2,6 +2,7 @@
 // Copy this file to: src/components/sections/ServiceCards.jsx
 
 import { services } from "../data/services";
+import { Link } from "react-router-dom";
 
 export default function ServicePage() {
  
@@ -61,6 +62,14 @@ export default function ServicePage() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Learn More Button */}
+                  <Link
+                    to={service.link}
+                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition"
+                  >
+                    Learn More →
+                  </Link>
                 </div>
 
               </div>

@@ -8,10 +8,15 @@ import ContactFormSection from './pages/ContactFormSection';
 import NotFoundPage from './pages/NotFoundPage';
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
+/* Service Detail Pages */
+import ReverseEngineering from "./pages/Services/ReverseEngineering";
+import MalwareAnalysis from "./pages/Services/MalwareAnalysis";
+
+
 
 function App() {
   return (
-    <>
+      <>
    
       <BrowserRouter>
         <Navbar />
@@ -24,6 +29,10 @@ function App() {
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactFormSection />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/services/reverse-engineering" element={<ReverseEngineering />} />
+          <Route path="/services/malware-analysis" element={<MalwareAnalysis />}
+/>
+
         </Routes>
        </main>
         <Footer />

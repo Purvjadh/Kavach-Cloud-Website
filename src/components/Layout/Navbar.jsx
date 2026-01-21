@@ -28,7 +28,7 @@ export default function Navbar() {
               alt="Kavach Cloud Logo"
               className="w-8 h-8 object-contain"
             />
-            <span className="text-2xl font-bold text-purple-600">
+            <span className="text-2xl font-bold text-blue-600">
               Kavach Cloud
             </span>
           </Link>
@@ -39,9 +39,9 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`transition hover:text-purple-600 ${
+                className={`transition hover:text-blue-600 ${
                   location.pathname === link.path
-                    ? "text-purple-600 font-semibold"
+                    ? "text-blue-600 font-semibold"
                     : "text-gray-700"
                 }`}
               >
@@ -51,7 +51,7 @@ export default function Navbar() {
 
             <Link
               to="/contact"
-              className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
             >
               Get Started
             </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
                 to={link.path}
                 className={`block py-2 transition ${
                   location.pathname === link.path
-                    ? "text-purple-600 font-semibold"
+                    ? "text-blue-600 font-semibold"
                     : "text-gray-700"
                 }`}
                 onClick={() => setIsOpen(false)}
@@ -86,7 +86,7 @@ export default function Navbar() {
 
             <Link
               to="/contact"
-              className="block mt-4 bg-purple-600 text-white px-6 py-2 rounded-lg text-center hover:bg-purple-700 transition"
+              className="block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition"
               onClick={() => setIsOpen(false)}
             >
               Get Started

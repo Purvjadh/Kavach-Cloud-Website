@@ -53,7 +53,7 @@ export default function UserStories() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-block px-4 py-2 bg-purple-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
             TESTIMONIALS
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
