@@ -85,7 +85,7 @@ export default function ServiceCards() {
       </div>
 
       {/* Flip Card Styles */}
-      <style jsx>{`
+      <style jsx='true'>{`
         .flip-card {
           perspective: 1000px;
           cursor: pointer;
