@@ -65,7 +65,7 @@ export default function Achievements() {
   return (
     <section 
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-400 text-white relative overflow-hidden"
     >
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">

@@ -49,7 +49,7 @@ export default function ContactFormSection() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-block px-4 py-2 bg-sky-100 text-sky-600 rounded-full text-sm font-semibold mb-4">
             CONTACT US
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -76,7 +76,7 @@ export default function ContactFormSection() {
               
               {/* Email */}
               <div className="group flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-r from-sky-400  to-cyan-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <Mail className="w-7 h-7 text-white" />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ export default function ContactFormSection() {
 
               {/* Phone */}
               <div className="group flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-r from-sky-400  to-cyan-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <Phone className="w-7 h-7 text-white" />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ export default function ContactFormSection() {
 
               {/* Office */}
               <div className="group flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-r from-sky-400  to-cyan-400 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <MapPin className="w-7 h-7 text-white" />
                 </div>
                 <div>
@@ -234,7 +234,7 @@ export default function ContactFormSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-sky-400  to-cyan-400 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

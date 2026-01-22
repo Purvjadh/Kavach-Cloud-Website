@@ -8,7 +8,7 @@ export default function BlogListPage() {
       
       
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r  from-sky-400 via-blue-500 to-cyan-400 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">Our Blog</h1>
           <p className="text-xl">Insights, tips, and industry news</p>

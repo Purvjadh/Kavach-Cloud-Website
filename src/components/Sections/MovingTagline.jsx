@@ -1,4 +1,4 @@
-import { Shield, Lock, Cloud, Zap, Globe, CheckCircle } from 'lucide-react';
+
 import { features } from '../../data/features.js';
 
 export default function MovingTagline() {
