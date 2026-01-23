@@ -1,25 +1,73 @@
+import { useEffect, useRef, useState } from 'react';
 import { Cloud, Server, Shield, Headphones } from 'lucide-react';
 
 export default function ServicesCloud() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         
-        {/* Section Header */}
+        {/* Section Header - Fade in from top */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 
+            className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-1000 ${
+              isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 -translate-y-8'
+            }`}
+          >
             Comprehensive Cloud Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p 
+            className={`text-xl text-gray-600 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
+              isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 -translate-y-8'
+            }`}
+          >
             Everything you need to store, protect, and access your data securely from anywhere in the world.
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid - Staggered card animations */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          {/* Service 1 */}
-          <div className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-purple-300">
+          {/* Service 1 - Cloud Storage */}
+          <div 
+            className={`group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 delay-300 border border-gray-100 hover:border-purple-300 ${
+              isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-12'
+            }`}
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity"></div>
             
             <div className="relative">
@@ -52,8 +100,14 @@ export default function ServicesCloud() {
             </div>
           </div>
 
-          {/* Service 2 */}
-          <div className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-300">
+          {/* Service 2 - Auto Backup */}
+          <div 
+            className={`group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 delay-500 border border-gray-100 hover:border-blue-300 ${
+              isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-12'
+            }`}
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity"></div>
             
             <div className="relative">
@@ -86,8 +140,14 @@ export default function ServicesCloud() {
             </div>
           </div>
 
-          {/* Service 3 */}
-          <div className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-indigo-300">
+          {/* Service 3 - Advanced Security */}
+          <div 
+            className={`group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 delay-700 border border-gray-100 hover:border-indigo-300 ${
+              isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-12'
+            }`}
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity"></div>
             
             <div className="relative">
@@ -120,8 +180,14 @@ export default function ServicesCloud() {
             </div>
           </div>
 
-          {/* Service 4 */}
-          <div className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-pink-300">
+          {/* Service 4 - 24/7 Support */}
+          <div 
+            className={`group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 delay-900 border border-gray-100 hover:border-pink-300 ${
+              isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-12'
+            }`}
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity"></div>
             
             <div className="relative">

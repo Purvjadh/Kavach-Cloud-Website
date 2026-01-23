@@ -1,11 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import userAvatarOne from '../../assets/images/user-avatar-one.jpg';
 import userAvatarTwo from '../../assets/images/user-avatar-two.png';
 import userAvatarThree from '../../assets/images/user-avatar-three.png';
+
 export default function UserStories() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imgError, setImgError] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const testimonials = [
     {
       id: 1,
@@ -48,25 +76,49 @@ export default function UserStories() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         
-        {/* Section Header */}
+        {/* Section Header - Slide from LEFT */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-sky-100 text-sky-600 rounded-full text-sm font-semibold mb-4">
+          <div 
+            className={`inline-block px-4 py-2 bg-sky-100 text-sky-600 rounded-full text-sm font-semibold mb-4 transition-all duration-1000 ease-out ${
+              isVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 -translate-x-6'
+            }`}
+          >
             TESTIMONIALS
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 
+            className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-1000 delay-100 ease-out ${
+              isVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 -translate-x-8'
+            }`}
+          >
             What Our Customers Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p 
+            className={`text-xl text-gray-600 max-w-2xl mx-auto transition-all duration-1000 delay-200 ease-out ${
+              isVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 -translate-x-8'
+            }`}
+          >
             Don't just take our word for it. Here's what businesses are saying about Kavach Cloud.
           </p>
         </div>
 
-        {/* Testimonial Carousel */}
+        {/* Testimonial Carousel - Slide from RIGHT */}
         <div className="max-w-5xl mx-auto">
-          <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
+          <div 
+            className={`relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100 transition-all duration-1200 delay-300 ease-out ${
+              isVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 translate-x-12'
+            }`}
+          >
             
             {/* Quote Icon */}
             <div className="absolute top-8 left-8 w-16 h-16 bg-gradient-to-br from-sky-600 to-cyan-500 rounded-2xl flex items-center justify-center opacity-10">
@@ -89,7 +141,7 @@ export default function UserStories() {
               </blockquote>
 
               {/* Highlight Badge */}
-              <div className="inline-block bg-sky-100 text-sky-600   px-4 py-2 rounded-full text-sm font-semibold mb-8">
+              <div className="inline-block bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold mb-8">
                 ✨ {testimonials[currentIndex].highlight}
               </div>
 
@@ -132,14 +184,20 @@ export default function UserStories() {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex gap-2 justify-center mt-8">
+          <div 
+            className={`flex gap-2 justify-center mt-8 transition-all duration-1000 delay-500 ease-out ${
+              isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-4'
+            }`}
+          >
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-gradient-to-r from-sky-400  to-cyan-400 w-8' 
+                    ? 'bg-gradient-to-r from-sky-400 to-cyan-400 w-8' 
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
@@ -148,22 +206,40 @@ export default function UserStories() {
           </div>
         </div>
 
-        {/* Bottom Stats */}
+        {/* Bottom Stats - Fade + slight scale */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="text-center">
+          <div 
+            className={`text-center transition-all duration-1000 delay-600 ease-out ${
+              isVisible 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-90'
+            }`}
+          >
             <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
               4.9/5
             </div>
             <div className="text-gray-600">Average Rating</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r  from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
+          <div 
+            className={`text-center transition-all duration-1000 delay-700 ease-out ${
+              isVisible 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-90'
+            }`}
+          >
+            <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
               2,500+
             </div>
             <div className="text-gray-600">Happy Customers</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r  from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
+          <div 
+            className={`text-center transition-all duration-1000 delay-800 ease-out ${
+              isVisible 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-90'
+            }`}
+          >
+            <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-2">
               98%
             </div>
             <div className="text-gray-600">Would Recommend</div>
