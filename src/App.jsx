@@ -23,6 +23,7 @@ import ZeroTrustSecurity from "./pages/Services/ZeroTrustSecurity";
 import DevSecOpsIntegration from"./pages/Services/DevSecOpsIntegration";
 import MobileIoTSecurity from "./pages/Services/MobileIoTSecurity";
 import ThreatIntelligence from "./pages/Services/ThreatIntelligence";
+import VCiscoServices from "./pages/Services/vCiscoServices";
 import SecurityTraining from "./pages/Services/SecurityTraining";
 
 
