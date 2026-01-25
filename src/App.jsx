@@ -50,10 +50,10 @@ function App() {
           <Route path="/services/active-directory-security" element={<ActiveDirectorySecurity />} />
           <Route path="/services/compliance-readiness" element={<ComplianceReadiness />} />
           <Route path="/services/zero-trust-security" element={<ZeroTrustSecurity />} />
-          <Route path="/Services/devsecops-integration" element={<DevSecOpsIntegration />} />
+          <Route path="/Services/devSecOps-integration" element={<DevSecOpsIntegration />} />
           <Route path="/services/mobile-iot-security" element={<MobileIoTSecurity />} />
           <Route path="/services/threat-intelligence" element={<ThreatIntelligence />} />
-          <Route path="/services/vcisco-services" element={<VCiscoServices />} />
+          <Route path="/services/vCisco-services" element={<vCiscoServices />} />
           <Route path="/services/security-training" element={<SecurityTraining />} />
 
 
