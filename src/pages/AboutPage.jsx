@@ -19,13 +19,12 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <p className="text-gray-600 mb-4">
-              Kavach Cloud was founded with a simple mission: make cloud storage 
-              secure, simple, and accessible for everyone...
+              Kavach Cloud was founded with a simple mission: make cloud storage secure, simple, and accessible for everyone. In a world where data is growing exponentially and cyber threats are constantly evolving, we saw the need for a platform that prioritizes both security and ease of use. What started as an idea among tech enthusiasts has grown into a solution designed to empower individuals and businesses to store, manage, and protect their digital assets with confidence.
             </p>
             
             <h2 className="text-3xl font-bold mb-6 mt-12">Our Mission</h2>
             <p className="text-gray-600 mb-4">
-              We believe data security shouldn't be complicated...
+              We believe data security shouldn’t be complicated. Our mission is to provide a reliable, user-friendly, and highly secure cloud environment where users can store their information without fear of breaches or data loss. By combining cutting-edge encryption, intuitive design, and scalable infrastructure, Kavach Cloud aims to redefine how people experience cloud storage — safe, seamless, and smart.
             </p>
             
             {/* <h2 className="text-3xl font-bold mb-6 mt-12">Our Team</h2>
