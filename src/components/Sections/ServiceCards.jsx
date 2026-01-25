@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { services } from '../../data/services';
 import { ArrowRight } from 'lucide-react';
 
+
+
 export default function ServiceCards() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
