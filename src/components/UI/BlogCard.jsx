@@ -19,7 +19,7 @@ export default function BlogCard({ slug, image, title, excerpt, readTime, date }
           
           <Link 
             to={`/blog/${slug}`}
-            className="text-purple-600 hover:underline flex items-center gap-2"
+            className="text-sky-500 hover:underline flex items-center gap-2"
           >
             Read More <ArrowRight size={16} />
           </Link>

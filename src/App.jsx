@@ -8,21 +8,38 @@ import ContactFormSection from './pages/ContactFormSection';
 import NotFoundPage from './pages/NotFoundPage';
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
-
+import MalwareAnalysis from './pages/Services/MalwareAnalysis';
+import AdvancedReverseEngineering from './pages/Services/AdvancedReverseEngineering';
+import IncidentResponseForensics from './pages/Services/IncidentResponseForensics';
+import ThreatHuntingMalwareAnalysis from './pages/Services/ThreatHuntingMalwareAnalysis';
+import PenetrationTesting from './pages/Services/PenetrationTesting';
+import CloudSecurityTesting from './pages/Services/CloudSecurityTesting';
+import ScrollToTop from './components/ScrollToTop';
+import VcisoServicePage from './pages/Services/VcisoServicePage';
+import Products from './pages/ProductsPage';
 function App() {
   return (
     <>
    
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
        <main>
          <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
+          {/* <Route path="/services/:slug" element={<ServicesPage />} /> */}
+          <Route path="/services/malware-development-analysis" element={<MalwareAnalysis />} />
+          <Route path="/services/advanced-reverse-engineering" element={<AdvancedReverseEngineering />} />
+          <Route path="/services/incident-response-forensics" element={<IncidentResponseForensics />} />
+          <Route path="/services/penetration-testing" element={<PenetrationTesting />} />
+          <Route path="/services/cloud-security-testing" element={<CloudSecurityTesting />} />
+          <Route path="/services/threat-hunting-malware-analysis" element={<ThreatHuntingMalwareAnalysis />} />
+          <Route path='/services/vciso-services' element={<VcisoServicePage/>} />
           <Route path="/blog" element={<BlogListPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactFormSection />} />
+          <Route path='/product' element={<Products />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
        </main>
