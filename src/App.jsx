@@ -23,7 +23,6 @@ import ZeroTrustSecurity from "./pages/Services/ZeroTrustSecurity";
 import DevSecOpsIntegration from"./pages/Services/DevSecOpsIntegration";
 import MobileIoTSecurity from "./pages/Services/MobileIoTSecurity";
 import ThreatIntelligence from "./pages/Services/ThreatIntelligence";
-import VCiscoServices from "./pages/Services/vCiscoServices";
 import SecurityTraining from "./pages/Services/SecurityTraining";
 
 
@@ -53,7 +52,6 @@ function App() {
           <Route path="/Services/devSecOps-integration" element={<DevSecOpsIntegration />} />
           <Route path="/services/mobile-iot-security" element={<MobileIoTSecurity />} />
           <Route path="/services/threat-intelligence" element={<ThreatIntelligence />} />
-          <Route path="/services/vCisco-services" element={<vCiscoServices />} />
           <Route path="/services/security-training" element={<SecurityTraining />} />
 
 
