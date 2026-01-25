@@ -180,12 +180,6 @@ export default function ZeroTrustSecurity() {
             and eliminate implicit trust across your environment.
           </p>
 
-          <p className="text-sm md:text-base max-w-3xl mx-auto mb-7 opacity-90">
-            Whether you're beginning your Zero Trust journey or optimizing 
-            an existing implementation, <strong>Kavach Cloud</strong> delivers 
-            actionable strategies, long-term security roadmaps that strengthen your cyber resilience.
-          </p>
-
           <button className="bg-white text-slate-700 px-12 py-4 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
             Request Zero Trust Consultation
           </button>

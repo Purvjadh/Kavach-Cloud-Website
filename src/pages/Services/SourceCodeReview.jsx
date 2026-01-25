@@ -121,62 +121,22 @@ export default function SourceCodeReview() {
           />
         </div>
 
-        {/* Process Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">
-            Our Secure Code Review Process
+        {/* CTA Section */}
+        <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">
+            Build Secure Applications From the Start
           </h2>
+          <p className="text-lg mb-8 max-w-3xl mx-auto opacity-90">
+            Partner with <strong>Kavach Cloud</strong> for professional 
+            <strong> source code review</strong> and 
+            <strong> secure application assessment services</strong> 
+            that protect your business from modern cyber threats.
+          </p>
 
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-
-            <ProcessStep icon={<FileText />} title="Scope & Planning"
-              desc="Define application scope, tech stack, and security requirements." />
-
-            <ProcessStep icon={<SearchCheck />} title="Static Analysis"
-              desc="Automated scanning and manual expert review of source code." />
-
-            <ProcessStep icon={<Bug />} title="Vulnerability Reporting"
-              desc="Detailed findings with severity ratings and PoC evidence." />
-
-            <ProcessStep icon={<CheckCircle />} title="Remediation Support"
-              desc="Developer guidance and re-testing to confirm fixes." />
-          </div>
+          <button className="bg-white text-green-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            Request Secure Code Review
+          </button>
         </div>
-
-
-       {/* CTA Section */}
-<div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-12 text-center text-white">
-  
-  <h2 className="text-3xl md:text-4xl font-bold mb-5">
-    Secure Your Software Before It Reaches Production
-  </h2>
-
-  <p className="text-lg max-w-4xl mx-auto mb-6 opacity-95 leading-relaxed">
-    In today’s threat landscape, a single insecure line of code can lead to massive data breaches 
-    and reputational damage. At <strong>Kavach Cloud</strong>, we deliver expert-led 
-    <strong> source code security reviews</strong> that uncover vulnerabilities early, 
-    eliminate hidden risks, and help your development team build security into every stage 
-    of the software lifecycle.
-  </p>
-
-  <p className="text-base max-w-3xl mx-auto mb-8 opacity-90">
-    From startups launching new applications to enterprises meeting compliance requirements, 
-    our tailored <strong>secure code assessment services</strong> ensure your software remains 
-    resilient against modern cyberattacks, regulatory penalties, and costly downtime.
-  </p>
-
-  {/* Single CTA Button */}
-  <button className="bg-white text-green-600 px-12 py-4 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-    Request a Secure Code Review
-  </button>
-
-  {/* Supporting Trust Line */}
-  <p className="text-sm mt-6 opacity-80">
-    100% Confidential Code Handling • Expert Security Analysts • Actionable Remediation Reports
-  </p>
-
-</div>
-
 
       </div>
     </section>

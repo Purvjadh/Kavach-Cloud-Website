@@ -10,6 +10,7 @@ import {
     Network,
     Server,
     FileCheck,
+    CheckCircle,
     Lock,
     GitBranch,
     Smartphone,
@@ -26,8 +27,7 @@ export const services = [{
         description: "Deep analysis of software, malware, and firmware ",
         features: ["Binary analysis", "Firmware inspection", "Protocol reversing"],
         color: "purple",
-        gradient: "from-purple-600 to-indigo-600",
-
+        gradient: "from-purple-600 to-indigo-600"
     },
     {
         id: 2,

@@ -1,23 +1,22 @@
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { services } from "../data/services";
+import { ArrowLeft, Check } from "lucide-react";
 
-import { useParams, useNavigate } from 'react-router-dom';
-import { services } from '../data/services';
-import { ArrowLeft, Check } from 'lucide-react';
-
-
-
-export default function ServicePage() {
-  const { serviceId } = useParams();
+export default function ServicesPage() {
+  const { slug } = useParams();   // ✅ Match route param
   const navigate = useNavigate();
-  
-  const service = services.find(s => s.id === serviceId);
 
+  // Find service by slug/id
+  const service = services.find((s) => s.id === slug);
+
+  // If service not found
   if (!service) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="text-blue-600 hover:underline"
           >
             Return to Home
@@ -29,11 +28,13 @@ export default function ServicePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+
       {/* Hero Section */}
       <div className={`bg-gradient-to-br ${service.gradient} text-white py-20`}>
         <div className="container mx-auto px-4">
+
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="flex items-center gap-2 text-white/90 hover:text-white mb-8 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -48,57 +49,61 @@ export default function ServicePage() {
               <div className="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-3">
                 FEATURE
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold">{service.title}</h1>
+              <h1 className="text-5xl md:text-6xl font-bold">
+                {service.title}
+              </h1>
             </div>
           </div>
-          
+
           <p className="text-xl text-white/90 max-w-3xl">
             {service.detailedDescription}
           </p>
         </div>
+      </div>
 
-        {/* Flip Cards Grid */}
+      {/* Flip Cards Section */}
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((item, index) => (
             <div key={index} className="flip-card h-80">
               <div className="flip-card-inner">
-                
-                {/* Front Side - Service Name */}
-                <div className={`flip-card-front bg-gradient-to-br ${service.gradient} rounded-2xl p-8 flex flex-col items-center justify-center text-white shadow-xl`}>
+
+                {/* Front */}
+                <div className={`flip-card-front bg-gradient-to-br ${item.gradient} rounded-2xl p-8 flex flex-col items-center justify-center text-white shadow-xl`}>
                   <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6">
-                    <service.icon className="w-10 h-10 text-white" />
+                    <item.icon className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-center">
-                    {service.title}
+                    {item.title}
                   </h3>
                 </div>
 
-                {/* Back Side - Service Details */}
+                {/* Back */}
                 <div className="flip-card-back bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-4`}>
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center mb-4`}>
+                    <item.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-xl font-bold mb-3 text-gray-900">
-                    {service.title}
+                    {item.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 text-sm mb-4">
-                    {service.description}
+                    {item.description}
                   </p>
-                  
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
+
+                  <ul className="space-y-2 mb-4">
+                    {item.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                        <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-br ${service.gradient}`}></div>
+                        <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-br ${item.gradient}`}></div>
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* Learn More Button */}
+                  {/* ✅ Dynamic Link */}
                   <Link
-                    to={service.link}
+                    to={item.link}
                     className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition"
                   >
                     Learn More →
@@ -109,13 +114,13 @@ export default function ServicePage() {
             </div>
           ))}
         </div>
-
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 pb-16">
+
         <div className="grid md:grid-cols-2 gap-12 mb-16">
-          
+
           {/* Key Features */}
           <div>
             <h2 className="text-3xl font-bold mb-6">Key Features</h2>
@@ -145,6 +150,7 @@ export default function ServicePage() {
               ))}
             </div>
           </div>
+
         </div>
 
         {/* Use Cases */}
@@ -154,7 +160,7 @@ export default function ServicePage() {
             {service.useCases.map((useCase, idx) => (
               <div key={idx} className={`bg-gradient-to-br ${service.gradient} text-white p-6 rounded-xl`}>
                 <div className="text-5xl font-bold mb-2 opacity-20">
-                  {(idx + 1).toString().padStart(2, '0')}
+                  {(idx + 1).toString().padStart(2, "0")}
                 </div>
                 <p className="font-semibold">{useCase}</p>
               </div>
@@ -162,7 +168,7 @@ export default function ServicePage() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA */}
         <div className={`mt-16 bg-gradient-to-br ${service.gradient} text-white rounded-2xl p-12 text-center`}>
           <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-8 text-white/90">
@@ -172,6 +178,7 @@ export default function ServicePage() {
             Start Free Trial
           </button>
         </div>
+
       </div>
     </div>
   );

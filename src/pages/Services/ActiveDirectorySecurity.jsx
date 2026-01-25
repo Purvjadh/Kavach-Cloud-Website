@@ -156,12 +156,6 @@ export default function ActiveDirectorySecurity() {
             across your enterprise environment.  
           </p>
 
-          <p className="text-sm max-w-2xl mx-auto mb-6 opacity-90">
-            Whether you’re securing a new domain or hardening an existing infrastructure, 
-            Kavach Cloud ensures your identity systems remain resilient against 
-            modern cyber threats and insider risks.
-           </p>
-
           <button className="bg-white text-indigo-600 px-10 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
             Request AD Security Assessment
           </button>

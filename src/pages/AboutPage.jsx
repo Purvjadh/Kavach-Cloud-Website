@@ -7,21 +7,21 @@ export default function AboutPage() {
 
       {/* HERO SECTION */}
       <section
-        className="relative py-36 bg-cover bg-center bg-no-repeat text-white"
-        style={{ backgroundImage: `url(${cyberBg})` }}
+         className="relative py-36 bg-cover bg-center bg-no-repeat text-white"
+         style={{ backgroundImage: `url(${cyberBg})` }}
       >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
 
-        <div className="relative container mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-wide">
-            About Kavach Cloud
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-            Building a digital shield for businesses in the era of modern cyber threats.
-          </p>
-        </div>
-      </section>
+      <div className="relative container mx-auto px-6 text-center">
+      <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-wide">
+         About Kavach Cloud
+      </h1>
+      <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+         Building a digital shield for businesses in the era of modern cyber threats.
+      </p>
+     </div>
+    </section>
 
       {/* STORY + MISSION */}
       <section className="py-24">
