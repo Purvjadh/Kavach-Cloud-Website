@@ -24,8 +24,8 @@ import DevSecOpsIntegration from"./pages/Services/DevSecOpsIntegration";
 import MobileIoTSecurity from "./pages/Services/MobileIoTSecurity";
 import ThreatIntelligence from "./pages/Services/ThreatIntelligence";
 import SecurityTraining from "./pages/Services/SecurityTraining";
-
-
+import VcisoServicePage from './pages/Services/VcisoServicePage';
+import Products from './pages/ProductsPage';
 function App() {
   return (
     <>
@@ -53,11 +53,11 @@ function App() {
           <Route path="/services/mobile-iot-security" element={<MobileIoTSecurity />} />
           <Route path="/services/threat-intelligence" element={<ThreatIntelligence />} />
           <Route path="/services/security-training" element={<SecurityTraining />} />
-
-
+          <Route path='/services/vciso-services' element={<VcisoServicePage/>} />
           <Route path="/blog" element={<BlogListPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactFormSection />} />
+          <Route path='/product' element={<Products />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
        </main>
