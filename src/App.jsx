@@ -15,6 +15,15 @@ import ThreatHuntingMalwareAnalysis from './pages/Services/ThreatHuntingMalwareA
 import PenetrationTesting from './pages/Services/PenetrationTesting';
 import CloudSecurityTesting from './pages/Services/CloudSecurityTesting';
 import ScrollToTop from './components/ScrollToTop';
+import SourceCodeReview from "./pages/Services/SourceCodeReview";
+import NetworkSecurityAssessment from "./pages/Services/NetworkSecurityAssessment";
+import ActiveDirectorySecurity from "./pages/Services/ActiveDirectorySecurity";
+import ComplianceReadiness from "./pages/Services/ComplianceReadiness";
+import ZeroTrustSecurity from "./pages/Services/ZeroTrustSecurity";
+import DevSecOpsIntegration from"./pages/Services/DevSecOpsIntegration";
+import MobileIoTSecurity from "./pages/Services/MobileIoTSecurity";
+import ThreatIntelligence from "./pages/Services/ThreatIntelligence";
+import SecurityTraining from "./pages/Services/SecurityTraining";
 import VcisoServicePage from './pages/Services/VcisoServicePage';
 import Products from './pages/ProductsPage';
 function App() {
@@ -35,6 +44,15 @@ function App() {
           <Route path="/services/penetration-testing" element={<PenetrationTesting />} />
           <Route path="/services/cloud-security-testing" element={<CloudSecurityTesting />} />
           <Route path="/services/threat-hunting-malware-analysis" element={<ThreatHuntingMalwareAnalysis />} />
+          <Route path="/services/source-code-review" element={<SourceCodeReview />} /> 
+          <Route path="/services/network-security-assessment" element={<NetworkSecurityAssessment />} />
+          <Route path="/services/active-directory-security" element={<ActiveDirectorySecurity />} />
+          <Route path="/services/compliance-readiness" element={<ComplianceReadiness />} />
+          <Route path="/services/zero-trust-security" element={<ZeroTrustSecurity />} />
+          <Route path="/Services/devSecOps-integration" element={<DevSecOpsIntegration />} />
+          <Route path="/services/mobile-iot-security" element={<MobileIoTSecurity />} />
+          <Route path="/services/threat-intelligence" element={<ThreatIntelligence />} />
+          <Route path="/services/security-training" element={<SecurityTraining />} />
           <Route path='/services/vciso-services' element={<VcisoServicePage/>} />
           <Route path="/blog" element={<BlogListPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
@@ -50,4 +68,3 @@ function App() {
 }
 
 export default App
-
