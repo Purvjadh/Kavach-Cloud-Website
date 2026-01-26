@@ -139,7 +139,7 @@ const Navbar = () => {
                 <div className="bg-sky-50 p-2 rounded-full mr-2 group-hover:bg-sky-100 transition-colors">
                   <Mail className="w-3.5 h-3.5 text-sky-600" />
                 </div>
-                <span className="font-medium">kavachcloud@gmail.com</span>
+                <span className="font-medium">contact@kavachcloud.com</span>
               </a>
               <a 
                 href="tel:+919876543210" 
@@ -148,7 +148,7 @@ const Navbar = () => {
                 <div className="bg-sky-50 p-2 rounded-full mr-2 group-hover:bg-sky-100 transition-colors">
                   <Phone className="w-3.5 h-3.5 text-sky-600" />
                 </div>
-                <span className="font-medium">+91 987 654 3210</span>
+                <span className="font-medium">+919878847476</span>
               </a>
             </div>
             
